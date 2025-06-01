@@ -1,19 +1,31 @@
-[![Kotlin](https://img.shields.io/badge/kotlin-1.2.31-blue.svg)](http://kotlinlang.org)  [![Maven Central](https://img.shields.io/maven-central/v/uy.kohesive.vertx/vertx-sqs.svg)](https://mvnrepository.com/artifact/uy.kohesive.sqs) [![CircleCI branch](https://img.shields.io/circleci/project/kohesive/vertx-sqs/master.svg)](https://circleci.com/gh/kohesive/vertx-sqs/tree/master) [![Issues](https://img.shields.io/github/issues/kohesive/vertx-sqs.svg)](https://github.com/kohesive/vertx-sqs/issues?q=is%3Aopen) [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/kohesive/vertx-sqs/blob/master/LICENSE) [![Kotlin Slack](https://img.shields.io/badge/chat-kotlin%20slack%20%23kohesive-orange.svg)](http://kotlinslackin.herokuapp.com)
+[![Java](https://img.shields.io/badge/java-21-blue.svg)](https://openjdk.org/projects/jdk/21/) [![Maven Central](https://img.shields.io/maven-central/v/uy.kohesive.vertx/vertx-sqs.svg)](https://mvnrepository.com/artifact/uy.kohesive.sqs) [![CircleCI branch](https://img.shields.io/circleci/project/kohesive/vertx-sqs/master.svg)](https://circleci.com/gh/kohesive/vertx-sqs/tree/master) [![Issues](https://img.shields.io/github/issues/kohesive/vertx-sqs.svg)](https://github.com/kohesive/vertx-sqs/issues?q=is%3Aopen) [![DUB](https://img.shields.io/dub/l/vibe-d.svg)](https://github.com/kohesive/vertx-sqs/blob/master/LICENSE)
 
 # Amazon SQS Client for Vert.x
 
 This Vert.x client allows Amazon SQS access in two ways:
 
-* As a @VertxGen service bridge to Amazon SQS Async Client methods
+* As a @VertxGen service bridge to Amazon SQS Async Client methods  
 * As an Amazon SQS queue consuming verticle
 
-### Gradle /Maven
+**Updated for Vert.x 5.x, Java 21, and AWS SDK v2**
 
-Add add the following dependency:
+### Maven
 
+Add the following dependency to your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>uy.kohesive.vertx</groupId>
+    <artifactId>vertx-sqs</artifactId>
+    <version>1.0.0-BETA-02</version>
+</dependency>
 ```
-uy.kohesive.vertx:vertx-sqs:1.0.0-BETA-01
-```
+
+### Requirements
+
+- Java 21 or higher
+- Vert.x 5.x
+- Maven 3.6+
 
 
 ## Service usage
