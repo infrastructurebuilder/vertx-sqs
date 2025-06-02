@@ -9,6 +9,12 @@ This Vert.x client allows Amazon SQS access in two ways:
 
 **Updated for Vert.x 5.x, Java 21, and AWS SDK v2**
 
+This code is originally &copy; for the developers listed in the pom.
+
+It was converted from a Kotlin/Gradle/Vertx 3.x build to a Maven/Java21/Vertx 5.x build with the help of Claude 4.
+
+The conversion was substantial enough that essentially none of the original code exists, and it has been relicensed under the Apache 2 License.  However, the intent of the code remains the same and it is expected to perform identically or nearly-identically to the [original code](https://github.com/kohesive/vertx-sqs).  There is insufficient testing to ensure that at the present time.
+
 ### Maven
 
 Add the following dependency to your `pom.xml`:
@@ -94,7 +100,7 @@ vertx.eventBus().consumer("sqs.queue.MyQueue", message -> {
 
 ## Message producer verticle usage
 
-An SQS message producer verticle can be configured to route the event bus messages to an SQS queue. The verticle is deployed with a config containing AWS credentials (see above), region, SQS queue url, Vert.x address and a `local` flag, which specifies whether or not the vertcle should start a local message consumer (`false` by default):
+An SQS message producer verticle can be configured to route the event bus messages to an SQS queue. The verticle is deployed with a config containing AWS credentials (see above), region, SQS queue url, Vert.x address and a `local` flag, which specifies whether or not the verticle should start a local message consumer (`false` by default):
 
 ```
 JsonObject config = new JsonObject()

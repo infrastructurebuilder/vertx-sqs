@@ -1,3 +1,4 @@
+
 package uy.kohesive.vertx.sqs;
 
 import org.slf4j.Logger;
