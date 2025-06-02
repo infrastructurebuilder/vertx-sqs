@@ -24,15 +24,16 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.infrastructurebuilder.dataprocessing</groupId>
-    <artifactId>isb-java-parent</artifactId>
-    <version>1-SNAPSHOT</version>
+    <groupId>org.infrastructurebuilder</groupId>
+    <artifactId>ibparent</artifactId>
+    <version>110</version>
   </parent>
 
 
     <!--<groupId>uy.kohesive.vertx</groupId>-->
-    <artifactId>vertx-sqs-vertx5</artifactId>
-    <version>1.0.0-BETA-02</version>
+    <groupId>org.infrastructurebuilder.usurped</groupId>
+    <artifactId>vertx-sqs</artifactId>
+    <version>5.0.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>Vertx-SQS</name>
@@ -61,21 +62,13 @@
 
     <properties>
 
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <maven.compiler.release>21</maven.compiler.release>
-<maven.compiler.jdk.version>21</maven.compiler.jdk.version>
-    <!--
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	-->
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.release>17</maven.compiler.release>
+<maven.compiler.jdk.version>17</maven.compiler.jdk.version>
+    <jacoco.max.missed.classes>99</jacoco.max.missed.classes>
+        <test.coverage.percentage.required>40</test.coverage.percentage.required>
 
-        <!-- Dependency Versions -->
-        <!--<vertx.version>5.0.0</vertx.version>
-        <aws.sdk.version>2.28.25</aws.sdk.version>
-        <junit.version>5.10.1</junit.version>
-        <slf4j.version>2.0.9</slf4j.version>
-        <logback.version>1.4.14</logback.version>
-        -->
         <elasticmq.version>1.6.8</elasticmq.version>
     </properties>
 
@@ -161,7 +154,7 @@
           <configuration>
             <toolchains>
               <jdk>
-                <version>21</version>
+                <version>17</version>
               </jdk>
             </toolchains>
           </configuration>
@@ -171,7 +164,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
-                    <release>21</release>
+                    <release>17</release>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>io.vertx</groupId>
